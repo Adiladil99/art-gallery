@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$laptop: 1366.98px;
+$tablet: 991.98px;
+$mobile: 767.98px; 
+$mobileSmall: 479.98px; 
+
+$fontRoboto: 'Roboto', sans-serif;
+
+* {
+    font-family: $fontRoboto;
+    box-sizing: border-box;
+}
+
+.desctop {
+    @media screen and (max-width: $tablet) {
+        display: none !important;
+    }
+}
+
+.mobile {
+    display: none;
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+    }
+}
+
+
+.container {
+    width: 1476px;
+    margin: 0 auto;
+
+    @media screen and (max-width: $laptop) {
+        width: 1140px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        width: 960px;
+    }
+
+    @media screen and (max-width: $tablet) {
+        width: 720px;
+    }
+
+    @media screen and (max-width: $mobile) {
+        width: 95%;
+    }
+
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.dragnone {
+    user-select: none;
+    -webkit-user-drag: none;
+}
